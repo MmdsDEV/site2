@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('mj.png') no-repeat center center;
+    background-size: 50%; /* Reduz o tamanho da imagem para 50% */
+    background-position: center; /* Garante que a imagem fique centralizada */
+    background-color: #6534d796; /* Cor roxa no fundo */
+    
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(208, 154, 247, 0.9); /* Fundo roxo translúcido */
+    border: 1px solid #f9f9f9;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #660f66; /* Tom de roxo claro */
+}
+
+p {
+    margin-bottom: 20px;
+    color: #e6e6fa; /* Lilás suave */
+}
+
+button {
+    background-color: #800080; /* Roxo escuro */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    background-color: #994ac1; /* Roxo vibrante */
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #dda0dd;
+}
+
+button:active {
+    transform: scale(0.9);
+}
+
+.trail {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #dda0dd; /* Lilás */
+    border-radius: 50%;
+    pointer-events: none;
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
