@@ -1,20 +1,148 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Convite para o Movimento Jovem</title>
-    <link rel="stylesheet" href="CSS1.css"> <!-- Link para o CSS externo -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grupo de Jovens - Relacionar-se</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('MJ.jpeg') center/cover no-repeat;
+      filter: brightness(0.4);
+      z-index: -2;
+      animation: zoom 30s infinite alternate ease-in-out;
+    }
+
+    @keyframes zoom {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.1); }
+    }
+
+    .jesus-image {
+      position: fixed;
+      bottom: 0;
+      right: 0;
+      width: 250px;
+      max-width: 35%;
+      z-index: -1;
+      opacity: 0;
+      animation: fadeSlideIn 3s ease-out 1s forwards;
+    }
+
+    @keyframes fadeSlideIn {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .content {
+      color: white;
+      text-align: center;
+      padding: 5vh 10vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+
+    .highlight {
+      color: #ffd700;
+    }
+
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    }
+
+    .info {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: inline-block;
+      backdrop-filter: blur(6px);
+      animation: slideUp 1.5s ease forwards;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(40px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Olá, querida!</h1>
-        <p>Você é uma luz especial no nosso grupo Movimento Jovem!</p>
-        <p>Amanhã, vamos nos reunir para buscar a presença de Deus e fortalecer nossa fé.</p>
-        <p>Vamos orar, louvar e compartilhar amor!</p>
-        <p>Sua presença é um presente precioso para nós!</p>
-        <button id="botao">Venha sentir o amor de Deus conosco!</button>
+  <div class="background"></div>
+
+  <!-- 👇 Desenho de Jesus com animação -->
+  <img src="MJ.jpeg" alt="Desenho de Jesus" class="jesus-image">
+
+  <div class="content">
+    <h1>✨ HOJE É DIA DE GRUPO! ✨</h1>
+    <p>
+      Vamos nos encontrar para mais uma noite de <span class="highlight">partilha, oração e amizade!</span><br><br>
+      O tema da noite é <strong>"Relacionar-se: Amar como Cristo nos ensinou"</strong><br>
+      Com os pregadores <strong>Lara e Alexandre</strong> 💛
+    </p>
+
+    <div class="info">
+      <p><strong>📍 Comunidade Nossa Senhora Aparecida</strong><br>
+      Av. C, 212 - Setor Água Branca</p>
+      <p><strong>🕗 Hoje, às 20h</strong></p>
     </div>
-    <script src="javaS1.js"></script> <!-- Link para o JavaScript externo -->
+
+    <div class="footer">
+     
+    </div>
+  </div>
 </body>
 </html>
